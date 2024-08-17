@@ -1,24 +1,40 @@
-# Simon-Game
-**Simon Game** : 
-This is a simple Simon game built using HTML, CSS, and JavaScript. The game tests the player's memory by generating a random sequence of colors and sounds, which the player must replicate in the correct order. As the game progresses, the sequence becomes longer and more challenging. 
+# 🎮 Simon Game
 
-**How to Play:**
-Press the Space Bar to start the game.
-Watch the color sequence that appears on the screen.
-Use the corresponding keys (W, A, S, D) or the Arrow Keys to repeat the sequence in the correct order.
-With each correct sequence, the game will add a new color to the sequence, increasing the difficulty.
-The game continues until the player makes a mistake.
+![Simon Game Start](./screenshots/start.png.png)
 
-**Features:**
-Dynamic and responsive interface.
-Smooth animations and sound effects.
-Increasing difficulty with each round.
-Supports both WASD keys and arrow keys for gameplay.
-Fun and challenging memory test.
+Simon Game is a simple memory game built using **HTML**, **CSS**, and **JavaScript**. It tests the player's memory by generating a random sequence of colors and sounds, which the player must replicate in the correct order.
 
-**Technologies Used:**
-**HTML:** Structure of the game.
-**CSS:** Styling and animations.
-**JavaScript (jQuery)**: Game logic and interactions.
+---
 
-Feel free to clone, modify, and improve the game. Contributions are welcome!
+## How to Play 🕹️
+
+1. Press the **Space Bar** to start the game in laptops and PC's. 
+2. Press the Empty Screen in Mobile phone to start the game.
+3. Watch the color sequence that appears on the screen.
+4. Use the corresponding keys (W, A, S, D) or the Arrow Keys or touch those buttons to repeat the sequence in the correct order.
+
+With each correct sequence, the game will add a new color, increasing the difficulty.
+
+---
+
+![Game Over Screen](./screenshots/gameover.png.png)
+
+## Features 🌟
+
+- **Dynamic and Responsive Interface**: Engages players with smooth animations.
+- **Increasing Difficulty**: The sequence grows with each round.
+- **Supports WASD and Arrow Keys**: Play the way you prefer.
+- **Memory Challenge**: A fun test for your brain!
+
+---
+
+## Technologies Used 💻
+
+- **HTML**: Structure of the game.
+- **CSS**: Styling and animations.
+- **JavaScript (jQuery)**: Game logic and interactions.
+
+---
+
+Feel free to [clone the repository](https://github.com/Yashwanth-AL/Simon-Game) and try it out!
+
