@@ -1,6 +1,6 @@
 # 🎮 Simon Game
 
-![Simon Game Start](./screenshots/start.png.png)
+![Simon Game Start](./screenshots/start.png)
 
 Simon Game is a simple memory game built using **HTML**, **CSS**, and **JavaScript**. It tests the player's memory by generating a random sequence of colors and sounds, which the player must replicate in the correct order.
 
@@ -17,7 +17,7 @@ With each correct sequence, the game will add a new color, increasing the diffic
 
 ---
 
-![Game Over Screen](./screenshots/gameover.png.png)
+![Game Over Screen](./screenshots/gameover.png)
 
 ## Features 🌟
 
