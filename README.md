@@ -1,9 +1,6 @@
 # 🎮 Simon Game
 
----
-
-## 🎯 [Play the Simon Game Now!](https://yashwanth-al.github.io/Simon-Game/) 🎯
-
+## 🎯[Play Now!](https://yashwanth-al.github.io/Simon-Game/)🎯
 Click the link above to experience the game in action!
 
 ---
