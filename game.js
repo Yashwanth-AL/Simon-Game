@@ -4,17 +4,28 @@ var userClickedPattern = [];
 var level = 0;
 var started = false;
 
+// Focus on the hidden input field when the game starts via keydown or touch/click
 $(document).keydown(function(event) {
   var key = event.key;
   if (!started && key == ' ') {
-    $("#hidden-input").focus();  // Focus on the hidden input field
-    $("#level-title").text("Level : " + level);
-    setTimeout(function() {
-      nextSequence();
-    }, 1000); 
-    started = true;
+    startGame();
   }
 });
+
+$(document).on("click touchstart", function() {
+  if (!started) {
+    startGame();
+  }
+});
+
+function startGame() {
+  $("#hidden-input").focus();  // Focus on the hidden input field
+  $("#level-title").text("Level : " + level);
+  setTimeout(function() {
+    nextSequence();
+  }, 1000); 
+  started = true;
+}
 
 // Handle keyboard and touch input
 $(document).keydown(function(event){
@@ -55,7 +66,7 @@ function checkAnswer(currentLevel){
       }
     } else {
       playSound("wrong");
-      $("h1").text("Game Over!!! Press space key to Restart.");
+      $("h1").text("Game Over!!! Press space key or tap to Restart.");
       $("body").addClass("game-over");
       setTimeout(function(){
         $("body").removeClass("game-over");
