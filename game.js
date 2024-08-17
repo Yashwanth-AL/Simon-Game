@@ -4,22 +4,22 @@ var userClickedPattern = [];
 var level = 0;
 var started = false;
 
-// Focus on the hidden input field when the game starts via keydown or touch/click
 $(document).keydown(function(event) {
   var key = event.key;
-  if (!started && key == ' ') {
+  if(!started && key == ' '){
     startGame();
   }
 });
 
-$(document).on("click touchstart", function() {
-  if (!started) {
+//Start the game or restart it by touching outside the buttons and prevent scrolling
+$(document).on('touchstart', function(event) {
+  event.preventDefault();
+  if (!started && !$(event.target).hasClass('btn')) {
     startGame();
   }
 });
 
 function startGame() {
-  $("#hidden-input").focus();  // Focus on the hidden input field
   $("#level-title").text("Level : " + level);
   setTimeout(function() {
     nextSequence();
@@ -27,7 +27,6 @@ function startGame() {
   started = true;
 }
 
-// Handle keyboard and touch input
 $(document).keydown(function(event){
   var key = event.key;
   switch(key){
@@ -44,11 +43,6 @@ $(".btn").click(function() {
   execute(userChosenColour);
 });
 
-// Add touch event listeners for mobile devices
-$(".btn").on("touchstart", function() {
-  var userChosenColour = $(this).attr("id");
-  execute(userChosenColour);
-});
 
 function execute(button){
   userClickedPattern.push(button);
@@ -66,7 +60,7 @@ function checkAnswer(currentLevel){
       }
     } else {
       playSound("wrong");
-      $("h1").text("Game Over!!! Press space key or tap to Restart.");
+      $("h1").text("Game Over!!! Press space key to Restart.");
       $("body").addClass("game-over");
       setTimeout(function(){
         $("body").removeClass("game-over");
@@ -105,7 +99,3 @@ function animatePress(currentColour){
   }, 100);
 }
 
-// Prevent scrolling on touch devices while playing
-$(document).on('touchmove', function(e) {
-  e.preventDefault();
-});
