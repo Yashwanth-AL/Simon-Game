@@ -1,5 +1,13 @@
 # 🎮 Simon Game
 
+---
+
+## 🎯 [Play the Simon Game Now!](https://yashwanth-al.github.io/Simon-Game/) 🎯
+
+Click the link above to experience the game in action!
+
+---
+
 ![Simon Game Start](./screenshots/start.png)
 
 Simon Game is a simple memory game built using **HTML**, **CSS**, and **JavaScript**. It tests the player's memory by generating a random sequence of colors and sounds, which the player must replicate in the correct order.
