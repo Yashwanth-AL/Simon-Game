@@ -6,7 +6,8 @@ var started = false;
 
 $(document).keydown(function(event) {
   var key = event.key;
-  if(!started && key == ' '){
+  if (!started && key == ' ') {
+    $("#hidden-input").focus();  // Focus on the hidden input field
     $("#level-title").text("Level : " + level);
     setTimeout(function() {
       nextSequence();
@@ -15,6 +16,7 @@ $(document).keydown(function(event) {
   }
 });
 
+// Handle keyboard and touch input
 $(document).keydown(function(event){
   var key = event.key;
   switch(key){
@@ -31,6 +33,11 @@ $(".btn").click(function() {
   execute(userChosenColour);
 });
 
+// Add touch event listeners for mobile devices
+$(".btn").on("touchstart", function() {
+  var userChosenColour = $(this).attr("id");
+  execute(userChosenColour);
+});
 
 function execute(button){
   userClickedPattern.push(button);
@@ -87,3 +94,7 @@ function animatePress(currentColour){
   }, 100);
 }
 
+// Prevent scrolling on touch devices while playing
+$(document).on('touchmove', function(e) {
+  e.preventDefault();
+});
